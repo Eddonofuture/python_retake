@@ -1,11 +1,12 @@
-from notebook import Note
+from notebook import Note, Notebook
 
-n1 = Note("hello world")
-
-n2 = Note('Again')
-
-print(n1.id)
-print(n2.id)
-
-print(n1.match('hello'))
-print(n2.match('a'))
+n = Notebook()
+n.new_note("hello words")
+n.new_note("hello again")
+print(n.notes)
+print(n.notes[0].id)
+print(n.notes[1].id)
+n.modify_memo(1,'some algo')
+print(n.notes[1].id)
+print(n.notes[0].memo)
+print(n.search('hello'))
