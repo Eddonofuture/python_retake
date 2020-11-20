@@ -8,4 +8,6 @@ class EvenOnly(list):
 
 
 e = EvenOnly()
-e.append("a string")
+e.append(2)
+#e.append(1)
+#e.append("a string")
